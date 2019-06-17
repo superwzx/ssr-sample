@@ -1,7 +1,6 @@
 const http = require('http');
 const path = require('path');
 const ReactDOMServer = require('react-dom/server');
-const {ChunkExtractor} = require('@loadable/server');
 const React = require('react');
 import Hallo from './Hallo'
 
