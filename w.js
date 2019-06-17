@@ -8,9 +8,7 @@ const server = http.createServer((req, res) => {
   res.setHeader('X-Foo', 'bar');
   res.writeHead(200, { 'Content-Type': 'text/html' });
   res.write('<html><head><title>Test</title></head><body>')
-  const stream = ReactDOMServer.renderToNodeStream(<Hallo />).pipe(res, {end: false})
-  stream.on('end', () =>
-    res.end(`</body></html>`),
-  )
+  
+  const stream = ReactDOMServer.renderToNodeStream(<Hallo />).pipe(res)
 
 }).listen(3000)
